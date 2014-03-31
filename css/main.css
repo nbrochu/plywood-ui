@@ -1,0 +1,57 @@
+body, html {
+    height: 100%;
+}
+
+.navbar-right li {
+    margin-top:8px;
+    margin-right:30px;
+}
+
+.navbar-right label {
+    color:#F5F5F5;
+    font-weight: normal;
+    vertical-align: -1px;
+    margin-right: 4px;
+}
+
+.navbar-right input {
+    display:inline;
+    width: 180px;
+    margin-right:10px;
+}
+
+.plywood-connection {
+    margin-right:10px;
+    vertical-align:-1px;
+}
+
+.plywood-connected-no {
+    color:#c12e2a;
+}
+
+.plywood-connected-yes {
+    color:#419641;
+}
+
+.plywood-well {
+    background-image:none;
+    background-color:#333;
+    border:none;
+    box-shadow:none;
+    max-height:300px;
+    overflow-y:scroll;
+}
+
+.plywood-well > pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 10px;
+    color: #F5F5F5;
+    background-color:transparent;
+    border:none;
+    overflow:scroll;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">  
+    <title>Plywood UI</title>
+
+    <meta name="description" content="Plywood UI">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/autobahn.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+  </head>
+
+  <body>
+
+    <div id="wrap">
+      <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color:#EEE;">Plywood UI</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <span class="glyphicon glyphicon-off plywood-connection plywood-connected-no"></span>
+              
+              <label for="plywood_host">Host</label>
+              <input type='text' id="plywood_host" placeholder="localhost" class="form-control plywood-host" style="width:250px; margin-right:15px;"/>
+
+              <label for="plywood_port">Port</label>
+              <input type='text' id="plywood_port" placeholder="17998" class="form-control plywood-port" style="width:150px;"/>
+
+              <span class="btn btn-success plywood-connect"><i class="glyphicon glyphicon-flash"></i> Connect</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 main">
+            <div class="alert alert-success alert-dismissable plywood-first-load-alert">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong>Hello!</strong> Enter the host name and port of your Plywood instance and click 'Connect' to get started.
+            </div>
+
+            <div class="alert alert-danger alert-dismissable plywood-error-alert" style="display:none;">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+              <div class="plywood-error-message">
+                Sample Error
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 active-log-area">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Active Logs</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div class="no-active-log">
+                      <p>No Logs Activated.</p>
+                    </div>
+
+                    <div class="active-logs" style="">
+                      <div class="well plywood-well">
+                        <pre class="plywood-log-content"></pre>
+                      </div>
+                    </div>
+
+                    <div id="active_log_item_template" style="display:none;">
+                      <ul>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 log-selection-area">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Available Logs</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div class="no-log-selection">
+                      <p>No Logs Available.</p>
+                    </div>
+
+                    <div class="log-selection" style="display:none;">
+                      <ul></ul>
+                    </div>
+
+                    <div id="log_selection_item_template" style="display:none;">
+                      <ul>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/plywood.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        window.Plywood.init();
+      });
+    </script>
+  </body>
+</html>
